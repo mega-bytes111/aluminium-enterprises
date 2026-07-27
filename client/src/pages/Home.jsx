@@ -41,6 +41,7 @@ const Home = () => {
 
       <ScrollTop />
       <WhatsAppFloat />
+      <MobileContactBar />
 
     </div>
   );

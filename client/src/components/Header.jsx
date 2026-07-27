@@ -11,7 +11,7 @@ const Header = () => {
         {/* ✅ Logo */}
         <Logo />
 
-        {/* ✅ Desktop Contact Buttons */}
+        {/* ✅ Desktop Buttons */}
         <div className="hidden md:flex items-center gap-3">
 
           <a
@@ -48,7 +48,7 @@ const Header = () => {
 
       </div>
 
-      {/* ✅ Mobile Dropdown Contact Menu */}
+      {/* ✅ Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="md:hidden bg-blue-800 text-white px-6 py-4 space-y-3">
 
@@ -65,17 +65,11 @@ const Header = () => {
             💬 WhatsApp
           </a>
 
-          <a
-            href="tel:+919670333923"
-            className="block py-2"
-          >
+          <a href="tel:+919670333923" className="block py-2">
             📞 Call 1
           </a>
 
-          <a
-            href="tel:+919695583003"
-            className="block py-2"
-          >
+          <a href="tel:+919695583003" className="block py-2">
             📞 Call 2
           </a>
 
