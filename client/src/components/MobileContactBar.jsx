@@ -11,7 +11,7 @@ const MobileContactBar = () => {
       </a>
 
       <a
-        href="https://m.me/YOUR_PAGE_USERNAME"
+       href="https://m.me/shrivishwkarmaenterprises"
         target="_blank"
         rel="noopener noreferrer"
       >

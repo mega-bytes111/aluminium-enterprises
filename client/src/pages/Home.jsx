@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import FadeInSection from "../components/FadeInSection";
 import ScrollTop from "../components/ScrollTop";
 import WhatsAppFloat from "../components/WhatsAppFloat";
+import MobileContactBar from "../components/MobileContactBar"; // ✅ ADD THIS
 
 const Home = () => {
   return (
