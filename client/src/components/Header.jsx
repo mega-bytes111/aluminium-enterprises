@@ -1,44 +1,32 @@
+import { useState } from "react";
 import Logo from "./Logo";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-3 shadow-xl sticky top-0 z-50">
-      <div className="container mx-auto px-4 flex justify-between items-center gap-4">
+      <div className="container mx-auto px-4 flex justify-between items-center">
 
         {/* ✅ Logo */}
         <Logo />
 
-        {/* ✅ Director Info (Desktop only) */}
-        <div className="hidden lg:block text-right">
-          <p className="text-sm font-semibold">
-            Vinod Vishwakarma
-          </p>
-          <p className="text-xs opacity-80">
-            Managing Director
-          </p>
-          <p className="text-xs opacity-80 mt-1">
-            📞 9670333923 | 9695583003
-          </p>
-        </div>
+        {/* ✅ Desktop Contact Buttons */}
+        <div className="hidden md:flex items-center gap-3">
 
-        {/* ✅ Action Buttons */}
-        <div className="flex items-center gap-3">
-
-          {/* ✅ WhatsApp Button */}
           <a
             href="https://wa.me/919670333923"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] hover:shadow-green-400/50 hover:shadow-xl px-4 py-2 rounded-full font-semibold transition shadow-lg text-sm md:text-base whitespace-nowrap"
+            className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] px-4 py-2 rounded-full font-semibold transition shadow-lg text-sm"
           >
             <i className="fab fa-whatsapp text-lg"></i>
             WhatsApp
           </a>
 
-          {/* ✅ Call Button */}
           <a
             href="tel:+919670333923"
-            className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 hover:shadow-orange-400/50 hover:shadow-xl px-4 md:px-6 py-2 rounded-full font-semibold transition shadow-lg whitespace-nowrap text-sm md:text-base"
+            className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full font-semibold transition shadow-lg text-sm"
           >
             <i className="fas fa-phone-alt text-sm"></i>
             Call Now
@@ -46,7 +34,60 @@ const Header = () => {
 
         </div>
 
+        {/* ✅ Mobile Hamburger */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-2xl"
+        >
+          {menuOpen ? (
+            <i className="fas fa-times"></i>
+          ) : (
+            <i className="fas fa-bars"></i>
+          )}
+        </button>
+
       </div>
+
+      {/* ✅ Mobile Dropdown Contact Menu */}
+      {menuOpen && (
+        <div className="md:hidden bg-blue-800 text-white px-6 py-4 space-y-3">
+
+          <h3 className="font-semibold text-lg border-b border-blue-600 pb-2">
+            Contact
+          </h3>
+
+          <a
+            href="https://wa.me/919670333923"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block py-2"
+          >
+            💬 WhatsApp
+          </a>
+
+          <a
+            href="tel:+919670333923"
+            className="block py-2"
+          >
+            📞 Call 1
+          </a>
+
+          <a
+            href="tel:+919695583003"
+            className="block py-2"
+          >
+            📞 Call 2
+          </a>
+
+          <a
+            href="mailto:shrivishwkarmaenterprises@gmail.com"
+            className="block py-2"
+          >
+            ✉ Email
+          </a>
+
+        </div>
+      )}
     </header>
   );
 };
