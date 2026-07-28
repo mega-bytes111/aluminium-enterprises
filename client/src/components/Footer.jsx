@@ -20,11 +20,11 @@ const Footer = () => {
         </p>
 
         <p className="opacity-70 text-sm">
-          1355/10, A-Block, Meena Market, Indira Nagar, Lucknow
+          * 1355/10, A-Block, Meena Market, Indira Nagar, Lucknow
         </p>
 
         <p className="opacity-70 text-sm">
-          Office Address S-8 Kishan Bazar Vibhuti Khand Gomti Nagar Lucknow
+          * Office Address S-8 Kishan Bazar Vibhuti Khand Gomti Nagar Lucknow
         </p>
 
         <p className="text-sm opacity-60 mt-4">
