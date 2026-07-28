@@ -10,6 +10,7 @@ const services = [
   "Interior ACP Partitions",
   "Exterior ACP Facades",
   "Custom ACP Designs",
+  "Office Cabin Glass",
   "Glass Repair & Maintenance",
   "ACP Repair & Maintenance",
 ];
