@@ -4,7 +4,7 @@ const Logo = () => {
 
       {/* ✅ Official Logo Image */}
       <img
-        src="/images/logo.png"
+        src="/images/logo.jpg"
         alt="Shri Vishwkarma Enterprises"
         className="h-12 md:h-16 w-auto object-contain"
       />
