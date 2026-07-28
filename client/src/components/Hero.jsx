@@ -7,7 +7,7 @@ const Hero = () => {
         <div className="flex flex-col items-center mb-8">
 
           <img
-            src="/images/manager.jpg"
+            src="/images/manager.jpeg"
             alt="Vinod Vishwakarma"
             className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-white shadow-2xl"
           />
