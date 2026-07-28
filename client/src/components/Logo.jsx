@@ -2,11 +2,11 @@ const Logo = () => {
   return (
     <div className="bg-white rounded-xl px-4 py-2 shadow-xl flex items-center gap-4">
 
-      {/* ✅ Official Logo Image */}
+      {/* ✅ Official Logo Image (Rounded Corners) */}
       <img
         src="/images/logo.jpg"
         alt="Shri Vishwkarma Enterprises"
-        className="h-12 md:h-16 w-auto object-contain"
+        className="h-12 md:h-16 w-auto object-contain rounded-lg shadow-sm"
       />
 
       {/* ✅ Company Name Text */}
