@@ -1,10 +1,14 @@
 const images = [
-  "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600",
-  "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600",
-  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600",
-  "https://images.unsplash.com/photo-1558036117-15e82a2c9a9a?w=600",
-  "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&2",
-  "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&2",
+  "/images/gallery/project1.webp",
+  "/images/gallery/project2.webp",
+  "/images/gallery/project3.webp",
+  "/images/gallery/project4.webp",
+  "/images/gallery/project5.webp",
+  "/images/gallery/project6.webp",
+  "/images/gallery/project7.webp",
+  "/images/gallery/project8.webp",
+  "/images/gallery/project9.webp",
+  "/images/gallery/project10.webp",
 ];
 
 const Gallery = () => {
@@ -12,20 +16,21 @@ const Gallery = () => {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
 
-        <h2 className="text-3xl font-bold text-center text-blue-900 mb-10">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-center text-blue-900 mb-12">
           Our Project Gallery
         </h2>
 
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {images.map((img, index) => (
             <div
               key={index}
-              className="overflow-hidden rounded-xl shadow-lg group cursor-pointer"
+              className="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 group"
             >
               <img
                 src={img}
-                alt="project"
-                className="w-full h-60 object-cover transform group-hover:scale-110 transition duration-500"
+                alt={`Project ${index + 1}`}
+                loading="lazy"
+                className="w-full h-60 object-cover group-hover:scale-105 transition duration-500"
               />
             </div>
           ))}
