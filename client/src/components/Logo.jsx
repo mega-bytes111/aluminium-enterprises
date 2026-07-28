@@ -1,12 +1,12 @@
 const Logo = () => {
   return (
-    <div className="bg-white rounded-xl px-4 py-2 shadow-xl flex items-center gap-4">
+    <div className="bg-white rounded-2xl px-4 py-2 shadow-xl flex items-center gap-4 transition-all duration-300 hover:shadow-2xl">
 
-      {/* ✅ Official Logo Image (Rounded Corners) */}
+      {/* ✅ Official Logo Image (Premium Hover Effect) */}
       <img
         src="/images/logo.jpg"
         alt="Shri Vishwkarma Enterprises"
-        className="h-12 md:h-16 w-auto object-contain rounded-lg shadow-sm"
+        className="h-12 md:h-16 w-auto object-contain rounded-xl transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110"
       />
 
       {/* ✅ Company Name Text */}
