@@ -46,7 +46,6 @@ const Admin = () => {
     return value;
   };
 
-  // ✅ Dashboard Stats
   const totalLeads = quotes.length;
   const newLeads = quotes.filter((q) => q.status === "new").length;
   const contactedLeads = quotes.filter((q) => q.status === "contacted").length;
@@ -55,22 +54,32 @@ const Admin = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
 
-      {/* ✅ PREMIUM HEADER */}
-      <div className="mb-10 bg-white p-6 rounded-2xl shadow-lg border-l-4 border-blue-800">
+      {/* ✅ PREMIUM HEADER WITH LOGO */}
+      <div className="mb-10 bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
 
-        <h1 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 bg-clip-text text-transparent">
-          Shri Vishwkarma Enterprises
-        </h1>
+        <div className="flex items-center gap-4">
 
-        <div className="flex items-center gap-3 mt-3">
+          {/* ✅ Logo */}
+          <img
+            src="/images/logo.jpg"
+            alt="Shri Vishwkarma Enterprises"
+            className="h-14 w-auto rounded-xl shadow-md transition-all duration-300 hover:scale-105"
+          />
 
-          <span className="px-4 py-1 bg-blue-900 text-white text-sm font-semibold rounded-full shadow-md">
-            Admin Dashboard
-          </span>
+          {/* ✅ Title Section */}
+          <div>
+            <h1 className="text-2xl md:text-3xl font-extrabold text-blue-900">
+              Shri Vishwkarma Enterprises
+            </h1>
 
-          <span className="text-gray-500 text-sm hidden md:block">
-            Manage all website enquiries & leads
-          </span>
+            <span className="inline-block mt-2 px-4 py-1 bg-blue-900 text-white text-xs font-semibold rounded-full shadow-md">
+              Admin Dashboard
+            </span>
+
+            <p className="text-gray-500 text-sm mt-2 hidden md:block">
+              Manage all website enquiries & leads
+            </p>
+          </div>
 
         </div>
 
@@ -81,28 +90,28 @@ const Admin = () => {
       {/* ✅ Stats Cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
 
-        <div className="bg-white p-5 rounded-2xl shadow hover:shadow-xl transition text-center">
+        <div className="bg-white p-5 rounded-2xl shadow hover:shadow-2xl transition text-center">
           <h2 className="text-3xl font-bold text-blue-900">
             {totalLeads}
           </h2>
           <p className="text-gray-500 text-sm mt-1">Total Leads</p>
         </div>
 
-        <div className="bg-white p-5 rounded-2xl shadow hover:shadow-xl transition text-center">
+        <div className="bg-white p-5 rounded-2xl shadow hover:shadow-2xl transition text-center">
           <h2 className="text-3xl font-bold text-yellow-500">
             {newLeads}
           </h2>
           <p className="text-gray-500 text-sm mt-1">New</p>
         </div>
 
-        <div className="bg-white p-5 rounded-2xl shadow hover:shadow-xl transition text-center">
+        <div className="bg-white p-5 rounded-2xl shadow hover:shadow-2xl transition text-center">
           <h2 className="text-3xl font-bold text-purple-500">
             {contactedLeads}
           </h2>
           <p className="text-gray-500 text-sm mt-1">Contacted</p>
         </div>
 
-        <div className="bg-white p-5 rounded-2xl shadow hover:shadow-xl transition text-center">
+        <div className="bg-white p-5 rounded-2xl shadow hover:shadow-2xl transition text-center">
           <h2 className="text-3xl font-bold text-green-600">
             {closedLeads}
           </h2>
@@ -112,7 +121,7 @@ const Admin = () => {
       </div>
 
       {/* ✅ Table */}
-      <div className="overflow-x-auto bg-white rounded-2xl shadow-lg">
+      <div className="overflow-x-auto bg-white rounded-2xl shadow-xl hover:shadow-2xl transition">
         <table className="min-w-full text-sm text-left">
           <thead className="bg-blue-900 text-white">
             <tr>
