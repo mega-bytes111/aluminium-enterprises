@@ -1,11 +1,16 @@
 const services = [
   "ACP Cladding & Facades",
-  "WHPL Cladding Work",
+  "Toughened Glass Installation",
+  "AHPL Cladding Work",
+  "Glass Partitions",
   "Entrance & Canopy Design",
+  "Glass Doors & Windows",
+  "Glass Railings",
   "ACP Signage & Hoardings",
   "Interior ACP Partitions",
   "Exterior ACP Facades",
   "Custom ACP Designs",
+  "Glass Repair & Maintenance",
   "ACP Repair & Maintenance",
 ];
 
