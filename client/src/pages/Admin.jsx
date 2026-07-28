@@ -54,19 +54,12 @@ const Admin = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
 
-      {/* ✅ PREMIUM HEADER WITH LOGO */}
-      <div className="mb-10 bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+      {/* ✅ GLASS PREMIUM HEADER */}
+      <div className="mb-10 p-6 rounded-3xl bg-white/70 backdrop-blur-lg border border-white/40 shadow-2xl transition-all duration-300 hover:shadow-3xl">
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center justify-between">
 
-          {/* ✅ Logo */}
-          <img
-            src="/images/logo.jpg"
-            alt="Shri Vishwkarma Enterprises"
-            className="h-14 w-auto rounded-xl shadow-md transition-all duration-300 hover:scale-105"
-          />
-
-          {/* ✅ Title Section */}
+          {/* ✅ LEFT SIDE TITLE */}
           <div>
             <h1 className="text-2xl md:text-3xl font-extrabold text-blue-900">
               Shri Vishwkarma Enterprises
@@ -76,14 +69,23 @@ const Admin = () => {
               Admin Dashboard
             </span>
 
-            <p className="text-gray-500 text-sm mt-2 hidden md:block">
+            <p className="text-gray-600 text-sm mt-2 hidden md:block">
               Manage all website enquiries & leads
             </p>
           </div>
 
+          {/* ✅ RIGHT SIDE LOGO WITH GLASS EFFECT */}
+          <div className="bg-white/40 backdrop-blur-md p-3 rounded-2xl shadow-lg transition-all duration-300 hover:scale-105">
+            <img
+              src="/images/logo.jpg"
+              alt="Shri Vishwkarma Enterprises"
+              className="h-20 md:h-24 w-auto rounded-2xl"
+            />
+          </div>
+
         </div>
 
-        <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-orange-400 mt-5 rounded-full"></div>
+        <div className="h-1 w-28 bg-gradient-to-r from-orange-500 to-orange-400 mt-6 rounded-full"></div>
 
       </div>
 
@@ -91,30 +93,22 @@ const Admin = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
 
         <div className="bg-white p-5 rounded-2xl shadow hover:shadow-2xl transition text-center">
-          <h2 className="text-3xl font-bold text-blue-900">
-            {totalLeads}
-          </h2>
+          <h2 className="text-3xl font-bold text-blue-900">{totalLeads}</h2>
           <p className="text-gray-500 text-sm mt-1">Total Leads</p>
         </div>
 
         <div className="bg-white p-5 rounded-2xl shadow hover:shadow-2xl transition text-center">
-          <h2 className="text-3xl font-bold text-yellow-500">
-            {newLeads}
-          </h2>
+          <h2 className="text-3xl font-bold text-yellow-500">{newLeads}</h2>
           <p className="text-gray-500 text-sm mt-1">New</p>
         </div>
 
         <div className="bg-white p-5 rounded-2xl shadow hover:shadow-2xl transition text-center">
-          <h2 className="text-3xl font-bold text-purple-500">
-            {contactedLeads}
-          </h2>
+          <h2 className="text-3xl font-bold text-purple-500">{contactedLeads}</h2>
           <p className="text-gray-500 text-sm mt-1">Contacted</p>
         </div>
 
         <div className="bg-white p-5 rounded-2xl shadow hover:shadow-2xl transition text-center">
-          <h2 className="text-3xl font-bold text-green-600">
-            {closedLeads}
-          </h2>
+          <h2 className="text-3xl font-bold text-green-600">{closedLeads}</h2>
           <p className="text-gray-500 text-sm mt-1">Closed</p>
         </div>
 
@@ -136,7 +130,6 @@ const Admin = () => {
           <tbody>
             {quotes.map((quote) => (
               <tr key={quote._id} className="border-b hover:bg-gray-50 transition">
-
                 <td className="p-4">
                   {quote.quantity && quote.quantity !== "_"
                     ? `${quote.quantity} sq.ft`
@@ -147,9 +140,7 @@ const Admin = () => {
                   {safeValue(quote.serviceName || quote.requirement)}
                 </td>
 
-                <td className="p-4">
-                  {safeValue(quote.phone)}
-                </td>
+                <td className="p-4">{safeValue(quote.phone)}</td>
 
                 <td className="p-4">
                   <select
@@ -173,7 +164,6 @@ const Admin = () => {
                     Delete
                   </button>
                 </td>
-
               </tr>
             ))}
           </tbody>
