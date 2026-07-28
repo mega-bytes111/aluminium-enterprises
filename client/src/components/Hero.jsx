@@ -17,7 +17,7 @@ const Hero = () => {
             Vinod Vishwakarma
           </p>
           <p className="text-sm opacity-80">
-            Managing Director
+            (Managing Director)
           </p>
 
         </div>
