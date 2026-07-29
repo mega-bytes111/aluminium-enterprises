@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaBars, FaTimes, FaInstagram } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaBars,
+  FaTimes,
+  FaInstagram,
+} from "react-icons/fa";
 import Logo from "./Logo";
 
 const Header = () => {
@@ -12,10 +19,18 @@ const Header = () => {
         {/* ✅ Logo */}
         <Logo />
 
-        {/* ✅ Desktop Buttons */}
-        <div className="hidden md:flex items-center gap-3">
+        {/* ✅ Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-4">
 
-          {/* WhatsApp */}
+          {/* ✅ About (Desktop) */}
+          <a
+            href="#about"
+            className="font-semibold hover:text-yellow-300 transition"
+          >
+            About
+          </a>
+
+          {/* ✅ WhatsApp */}
           <a
             href="https://wa.me/919670333923"
             target="_blank"
@@ -26,7 +41,7 @@ const Header = () => {
             WhatsApp
           </a>
 
-          {/* Call */}
+          {/* ✅ Call */}
           <a
             href="tel:+919670333923"
             className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full font-semibold transition shadow-lg text-sm"
@@ -35,9 +50,9 @@ const Header = () => {
             Call Now
           </a>
 
-          {/* Instagram */}
+          {/* ✅ Instagram */}
           <a
-            href="https://instagram.com/YOUR_INSTAGRAM_ID"
+            href="https://instagram.com/shrivishwkarmaenterprises"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-full font-semibold transition shadow-lg text-sm"
@@ -62,6 +77,15 @@ const Header = () => {
       {menuOpen && (
         <div className="md:hidden bg-blue-800 text-white px-6 py-4 space-y-3">
 
+          {/* ✅ About (Mobile) */}
+          <a
+            href="#about"
+            onClick={() => setMenuOpen(false)}
+            className="block py-2 font-semibold border-b border-blue-600"
+          >
+            About
+          </a>
+
           <h3 className="font-semibold text-lg border-b border-blue-600 pb-2">
             Contact
           </h3>
@@ -76,12 +100,18 @@ const Header = () => {
             WhatsApp
           </a>
 
-          <a href="tel:+919670333923" className="flex items-center gap-2 py-2">
+          <a
+            href="tel:+919670333923"
+            className="flex items-center gap-2 py-2"
+          >
             <FaPhoneAlt />
             Call 1
           </a>
 
-          <a href="tel:+919695583003" className="flex items-center gap-2 py-2">
+          <a
+            href="tel:+919695583003"
+            className="flex items-center gap-2 py-2"
+          >
             <FaPhoneAlt />
             Call 2
           </a>
@@ -90,12 +120,11 @@ const Header = () => {
             href="https://m.me/shrivishwkarmaenterprises"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 py-2"
+            className="py-2"
           >
             💬 Messenger
           </a>
 
-          {/* Instagram in Mobile */}
           <a
             href="https://instagram.com/shrivishwkarmaenterprises"
             target="_blank"

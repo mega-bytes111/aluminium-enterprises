@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import FadeInSection from "../components/FadeInSection";
 import ScrollTop from "../components/ScrollTop";
 import WhatsAppFloat from "../components/WhatsAppFloat";
+import AboutSection from "../components/AboutSection";
 import MobileContactBar from "../components/MobileContactBar"; // ✅ ADD THIS
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
 
       <Header />
       <Hero />
+      <AboutSection />
 
       <div className="container mx-auto px-4">
         <QuoteForm />
