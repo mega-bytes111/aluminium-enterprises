@@ -20,7 +20,7 @@ const Home = () => {
       <Hero />
       <AboutSection />
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 mt-16">
         <QuoteForm />
       </div>
 
