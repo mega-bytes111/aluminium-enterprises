@@ -18,7 +18,9 @@ const Home = () => {
 
       <Header />
       <Hero />
-      <AboutSection />
+      <FadeInSection>
+  <AboutSection />
+</FadeInSection>
 
       <div className="container mx-auto px-4 mt-16">
         <QuoteForm />
