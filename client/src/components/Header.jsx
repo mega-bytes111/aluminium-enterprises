@@ -22,7 +22,6 @@ const Header = () => {
         {/* ✅ Desktop Navigation */}
         <div className="hidden md:flex items-center gap-4">
 
-          {/* ✅ About (Desktop) */}
           <a
             href="#about"
             className="font-semibold hover:text-yellow-300 transition"
@@ -30,7 +29,6 @@ const Header = () => {
             About
           </a>
 
-          {/* ✅ WhatsApp */}
           <a
             href="https://wa.me/919670333923"
             target="_blank"
@@ -41,7 +39,6 @@ const Header = () => {
             WhatsApp
           </a>
 
-          {/* ✅ Call */}
           <a
             href="tel:+919670333923"
             className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full font-semibold transition shadow-lg text-sm"
@@ -50,7 +47,6 @@ const Header = () => {
             Call Now
           </a>
 
-          {/* ✅ Instagram */}
           <a
             href="https://instagram.com/shrivishwkarmaenterprises"
             target="_blank"
@@ -66,18 +62,23 @@ const Header = () => {
         {/* ✅ Mobile Hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-2xl"
+          className="md:hidden text-2xl transition-transform duration-300"
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
       </div>
 
-      {/* ✅ Mobile Dropdown */}
-      {menuOpen && (
-        <div className="md:hidden bg-blue-800 text-white px-6 py-4 space-y-3">
+      {/* ✅ Animated Mobile Dropdown */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          menuOpen
+            ? "max-h-[500px] opacity-100"
+            : "max-h-0 opacity-0"
+        } bg-blue-800 text-white`}
+      >
+        <div className="px-6 py-4 space-y-3">
 
-          {/* ✅ About (Mobile) */}
           <a
             href="#about"
             onClick={() => setMenuOpen(false)}
@@ -120,7 +121,7 @@ const Header = () => {
             href="https://m.me/shrivishwkarmaenterprises"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 py-2"
+            className="py-2"
           >
             💬 Messenger
           </a>
@@ -144,7 +145,8 @@ const Header = () => {
           </a>
 
         </div>
-      )}
+      </div>
+
     </header>
   );
 };
