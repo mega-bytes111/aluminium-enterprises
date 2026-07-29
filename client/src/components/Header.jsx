@@ -120,7 +120,7 @@ const Header = () => {
             href="https://m.me/shrivishwkarmaenterprises"
             target="_blank"
             rel="noopener noreferrer"
-            className="py-2"
+            className="flex items-center gap-2 py-2"
           >
             💬 Messenger
           </a>
