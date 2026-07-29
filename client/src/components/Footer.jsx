@@ -15,19 +15,35 @@ const Footer = () => {
           📞 9670333923 | 9695583003
         </p>
 
-        <p className="opacity-80 mb-2">
+        <p className="opacity-80 mb-4">
           ✉ shrivishwkarmaenterprises@gmail.com
         </p>
 
-        <p className="opacity-70 text-sm">
-          * 1355/10, A-Block, Meena Market, Indira Nagar, Lucknow
-        </p>
+        {/* ✅ Main Address - Clickable */}
+        <div className="mb-3">
+          <a
+  href="https://maps.app.goo.gl/1AGBCA4aTpUMRAVo6"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center justify-center gap-2 text-sm opacity-80 hover:text-yellow-300 transition underline decoration-dotted"
+>
+  📍 1355/10, A-Block, Meena Market, Indira Nagar, Lucknow
+</a>
+        </div>
 
-        <p className="opacity-70 text-sm">
-          * Office Address S-8 Kishan Bazar Vibhuti Khand Gomti Nagar Lucknow
-        </p>
+        {/* ✅ Office Address - Clickable */}
+        <div className="mb-3">
+          <a
+            href="https://maps.app.goo.gl/ywX9YN3t8Mik5fEs9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 text-sm opacity-80 hover:text-yellow-300 transition underline decoration-dotted"
+          >
+            📍 Office: S-8 Kishan Bazar, Vibhuti Khand, Gomti Nagar, Lucknow
+          </a>
+        </div>
 
-        <p className="text-sm opacity-60 mt-4">
+        <p className="text-sm opacity-60 mt-6">
           © 2026 Shri Vishwkarma Enterprises. All Rights Reserved.
         </p>
 
