@@ -24,10 +24,27 @@ const AboutSection = () => {
             across residential, commercial, and industrial sectors.
           </p>
 
-          {/* ✅ Address Section */}
-          <div className="mt-8 text-sm text-gray-500 text-center md:text-left border-t pt-6">
-            <p>📍 1355/10, A-Block, Meena Market, Indira Nagar, Lucknow</p>
-            <p>📍 Office: S-8 Kishan Bazar, Vibhuti Khand, Gomti Nagar, Lucknow</p>
+          {/* ✅ Clickable Address Section */}
+          <div className="mt-8 text-sm text-center md:text-left border-t pt-6 space-y-3">
+
+            <a
+              href="https://maps.app.goo.gl/1AGBCA4aTpUMRAVo6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-gray-600 hover:text-blue-700 transition underline decoration-dotted"
+            >
+              📍 1355/10, A-Block, Meena Market, Indira Nagar, Lucknow
+            </a>
+
+            <a
+              href="https://maps.app.goo.gl/ywX9YN3t8Mik5fEs9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-gray-600 hover:text-blue-700 transition underline decoration-dotted"
+            >
+              📍 Office: S-8 Kishan Bazar, Vibhuti Khand, Gomti Nagar, Lucknow
+            </a>
+
           </div>
 
         </div>
