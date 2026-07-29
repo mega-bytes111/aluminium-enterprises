@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
+import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaBars, FaTimes, FaInstagram } from "react-icons/fa";
 import Logo from "./Logo";
 
 const Header = () => {
@@ -15,6 +15,7 @@ const Header = () => {
         {/* ✅ Desktop Buttons */}
         <div className="hidden md:flex items-center gap-3">
 
+          {/* WhatsApp */}
           <a
             href="https://wa.me/919670333923"
             target="_blank"
@@ -25,12 +26,24 @@ const Header = () => {
             WhatsApp
           </a>
 
+          {/* Call */}
           <a
             href="tel:+919670333923"
             className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full font-semibold transition shadow-lg text-sm"
           >
             <FaPhoneAlt />
             Call Now
+          </a>
+
+          {/* Instagram */}
+          <a
+            href="https://instagram.com/YOUR_INSTAGRAM_ID"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-full font-semibold transition shadow-lg text-sm"
+          >
+            <FaInstagram />
+            Instagram
           </a>
 
         </div>
@@ -73,11 +86,25 @@ const Header = () => {
             Call 2
           </a>
 
-           <a
-       href="https://m.me/shrivishwkarmaenterprises"
-        className="flex items-center gap-2 py-2">
-        💬 Messenger
-      </a>
+          <a
+            href="https://m.me/shrivishwkarmaenterprises"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 py-2"
+          >
+            💬 Messenger
+          </a>
+
+          {/* Instagram in Mobile */}
+          <a
+            href="https://instagram.com/shrivishwkarmaenterprises"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 py-2"
+          >
+            <FaInstagram />
+            Instagram
+          </a>
 
           <a
             href="mailto:shrivishwkarmaenterprises@gmail.com"
