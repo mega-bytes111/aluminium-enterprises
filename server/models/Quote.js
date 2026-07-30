@@ -12,13 +12,16 @@ const quoteSchema = new mongoose.Schema(
       type: String,
       required: true,
       enum: [
-        "cladding",
-        "facade",
-        "signage",
-        "partition",
-        "canopy",
-        "hoarding",
-      ],
+  "cladding",
+  "facade",
+  "toughened_glass",
+  "glass_doors",
+  "glass_railings",
+  "signage",
+  "partition",
+  "canopy",
+  "hoarding"
+],
     },
 
     serviceName: {

@@ -54,22 +54,20 @@ const QuoteForm = () => {
         />
 
         <select
-          value={serviceType}
-          onChange={(e) => setServiceType(e.target.value)}
-          className="w-full border-2 border-gray-200 p-3 rounded-lg focus:border-blue-700 focus:outline-none"
-        >
-          <option value="cladding">ACP Cladding</option>
-          <option value="facade">ACP Facade</option>
-          <option value="hoarding">Toughened Glass Installation</option>
-          <option value="hoarding">Glass Doors & Windows</option>
-          <option value="signage">ACP Signage</option>
-          <option value="hoarding">Glass Railings
-          </option>
-          <option 
-          value="partition">ACP Partition</option>
-          <option value="canopy">Entrance Canopy</option>
-          <option value="hoarding">Hoardings</option>
-        </select>
+  value={serviceType}
+  onChange={(e) => setServiceType(e.target.value)}
+  className="w-full border-2 border-gray-200 p-3 rounded-lg focus:border-blue-700 focus:outline-none"
+>
+  <option value="cladding">ACP Cladding</option>
+  <option value="facade">ACP Facade</option>
+  <option value="toughened_glass">Toughened Glass Installation</option>
+  <option value="glass_doors">Glass Doors & Windows</option>
+  <option value="glass_railings">Glass Railings</option>
+  <option value="signage">ACP Signage</option>
+  <option value="partition">ACP Partition</option>
+  <option value="canopy">Entrance Canopy</option>
+  <option value="hoarding">Hoardings</option>
+</select>
 
         <input
           type="text"
