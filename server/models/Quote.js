@@ -10,29 +10,31 @@ const quoteSchema = new mongoose.Schema(
 
     serviceType: {
       type: String,
-      required: true,
+      required: [true, "Service type is required"],
       enum: [
-  "cladding",
-  "facade",
-  "toughened_glass",
-  "glass_doors",
-  "glass_railings",
-  "signage",
-  "partition",
-  "canopy",
-  "hoarding"
-],
+        "cladding",
+        "facade",
+        "toughened_glass",
+        "glass_doors",
+        "glass_railings",
+        "signage",
+        "partition",
+        "canopy",
+        "hoarding"
+      ],
     },
 
     serviceName: {
       type: String,
-      required: true,
+      required: [true, "Service name is required"],
+      trim: true,
     },
 
     phone: {
       type: String,
       required: [true, "Phone number is required"],
-      match: [/^[0-9]{10}$/, "Phone number must be 10 digits"],
+      trim: true,
+      match: [/^[0-9]{10}$/, "Phone number must be exactly 10 digits"],
     },
 
     status: {
@@ -41,7 +43,9 @@ const quoteSchema = new mongoose.Schema(
       default: "new",
     },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+  }
 );
 
 export default mongoose.model("Quote", quoteSchema);

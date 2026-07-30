@@ -1,6 +1,19 @@
 import mongoose from "mongoose";
 import Quote from "../models/Quote.js";
-import { validationResult } from "express-validator";
+
+
+// ✅ Service Name Mapping
+const serviceNames = {
+  cladding: "ACP Cladding",
+  facade: "ACP Facade",
+  toughened_glass: "Toughened Glass Installation",
+  glass_doors: "Glass Doors & Windows",
+  glass_railings: "Glass Railings",
+  signage: "ACP Signage",
+  partition: "ACP Partition",
+  canopy: "Entrance Canopy",
+  hoarding: "Hoardings",
+};
 
 
 // 👉 Create Quote
@@ -8,6 +21,7 @@ export const createQuote = async (req, res) => {
   try {
     const { quantity, serviceType, phone } = req.body;
 
+    // ✅ Basic Validation
     if (!quantity || quantity <= 0) {
       return res.status(400).json({
         success: false,
@@ -15,21 +29,19 @@ export const createQuote = async (req, res) => {
       });
     }
 
-    if (!phone || phone.length !== 10) {
+    if (!phone || !/^[0-9]{10}$/.test(phone)) {
       return res.status(400).json({
         success: false,
         message: "Valid 10-digit phone number required",
       });
     }
 
-    const serviceNames = {
-      cladding: "ACP Cladding",
-      facade: "ACP Facade",
-      signage: "ACP Signage",
-      partition: "ACP Partition",
-      canopy: "Entrance Canopy",
-      hoarding: "Hoardings",
-    };
+    if (!serviceType || !serviceNames[serviceType]) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid service type selected",
+      });
+    }
 
     const quote = await Quote.create({
       quantity,
@@ -47,11 +59,10 @@ export const createQuote = async (req, res) => {
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: error.message,
+      message: error.message || "Server Error",
     });
   }
 };
-
 
 
 // 👉 Get All Quotes
@@ -74,13 +85,11 @@ export const getQuotes = async (req, res) => {
 };
 
 
-
 // 👉 Delete Quote
 export const deleteQuote = async (req, res) => {
   try {
     const { id } = req.params;
 
-    // ✅ Check valid Mongo ID
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).json({
         success: false,
@@ -113,7 +122,6 @@ export const deleteQuote = async (req, res) => {
 };
 
 
-
 // 👉 Update Quote Status
 export const updateQuoteStatus = async (req, res) => {
   try {
@@ -122,7 +130,6 @@ export const updateQuoteStatus = async (req, res) => {
 
     const allowedStatus = ["new", "contacted", "closed"];
 
-    // ✅ Validate ID
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).json({
         success: false,
@@ -130,7 +137,6 @@ export const updateQuoteStatus = async (req, res) => {
       });
     }
 
-    // ✅ Validate Status
     if (!allowedStatus.includes(status)) {
       return res.status(400).json({
         success: false,
